@@ -1,0 +1,46 @@
+.button {
+  height: 100px;
+  width: 100px;
+  font-size: 50px;
+  outline: none;
+  /* background: rgb(102, 51, 153, 0.1); */
+  background: none;
+  color: rgb(99, 1, 197);
+  border: none;
+}
+
+.button:nth-child(1) {
+  border-bottom: 5px solid rgb(99, 1, 197);
+  border-right: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(2) {
+  border-right: 5px solid rgb(99, 1, 197);
+  border-bottom: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(3) {
+  border-bottom: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(4) {
+  border-bottom: 5px solid rgb(99, 1, 197);
+  border-right: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(5) {
+  border-right: 5px solid rgb(99, 1, 197);
+  border-bottom: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(6) {
+  border-bottom: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(7) {
+  border-right: 5px solid rgb(99, 1, 197);
+}
+
+.button:nth-child(8) {
+  border-right: 5px solid rgb(99, 1, 197);
+}

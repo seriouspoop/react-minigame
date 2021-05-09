@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.board {
+  height: 300px;
+  width: 300px;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+}
+
+.fnc button {
+  border: none;
+  outline: none;
+  color: rgb(99, 1, 197);
+  border-bottom: 3px solid rgb(99, 1, 197);
+  background: rgb(99, 1, 197, 0.1);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.result {
+  width: 300px;
+  color: rgb(99, 1, 197);
+  display: grid;
+  place-items: center;
+}
+
+.resetbutton {
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.fnc {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.switchbutton {
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  cursor: pointer;
+}
