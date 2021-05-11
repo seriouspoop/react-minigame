@@ -20,8 +20,7 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
     tie: 0,
   };
 
-  const minimax = (calcboard, depth, isMaximizing) => {
-    console.log('AlphaBetaPruning');
+  const minimax = (calcboard, depth, alpha, beta, isMaximizing) => {
     let result = calculateWinner(calcboard)[0];
     if (result !== false) {
       return scores[result];
@@ -30,9 +29,11 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
       for (let x in calcboard) {
         if (calcboard[x] === "") {
           calcboard[x] = ai;
-          let score = minimax(calcboard, depth + 1, false);
+          let score = minimax(calcboard, depth + 1, alpha, beta, false);
           calcboard[x] = "";
           bestScore = Math.max(score, bestScore);
+          alpha = Math.max(alpha, score)
+          if (beta <= alpha) break;
         }
       }
       return bestScore;
@@ -41,9 +42,11 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
       for (let x in calcboard) {
         if (calcboard[x] === "") {
           calcboard[x] = human;
-          let score = minimax(calcboard, depth + 1, true);
+          let score = minimax(calcboard, depth + 1, alpha, beta, true);
           calcboard[x] = "";
           bestScore = Math.min(score, bestScore);
+          beta = Math.min(beta, score)
+          if (beta <= alpha) break;
         }
       }
       return bestScore;
@@ -56,7 +59,7 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
     for (let x in newBoard) {
       if (newBoard[x] === "") {
         newBoard[x] = ai;
-        let score = minimax(newBoard, 0, false);
+        let score = minimax(newBoard, 0, -Infinity, Infinity, false);
         newBoard[x] = "";
         if (score > bestScore) {
           bestScore = score;
