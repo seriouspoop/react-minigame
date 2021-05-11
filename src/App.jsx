@@ -23,7 +23,8 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
   const minimax = (calcboard, depth, isMaximizing) => {
     let result = calculateWinner(calcboard)[0];
     if (result !== false) {
-      return scores[result];
+      let Bestscore = scores[result] - depth;
+      return Bestscore;
     } else if (isMaximizing) {
       let bestScore = -Infinity;
       for (let x in calcboard) {
