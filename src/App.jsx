@@ -21,6 +21,7 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
   };
 
   const minimax = (calcboard, depth, isMaximizing) => {
+    console.log('AlphaBetaPruning');
     let result = calculateWinner(calcboard)[0];
     if (result !== false) {
       return scores[result];
