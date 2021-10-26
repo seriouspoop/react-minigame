@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-minigame/static/css/main.df814b37.chunk.css",
+    "main.js": "/react-minigame/static/js/main.96f02783.chunk.js",
+    "main.js.map": "/react-minigame/static/js/main.96f02783.chunk.js.map",
+    "runtime-main.js": "/react-minigame/static/js/runtime-main.f2bb3fa1.js",
+    "runtime-main.js.map": "/react-minigame/static/js/runtime-main.f2bb3fa1.js.map",
+    "static/js/2.f524853c.chunk.js": "/react-minigame/static/js/2.f524853c.chunk.js",
+    "static/js/2.f524853c.chunk.js.map": "/react-minigame/static/js/2.f524853c.chunk.js.map",
+    "static/js/3.b633f61c.chunk.js": "/react-minigame/static/js/3.b633f61c.chunk.js",
+    "static/js/3.b633f61c.chunk.js.map": "/react-minigame/static/js/3.b633f61c.chunk.js.map",
+    "index.html": "/react-minigame/index.html",
+    "precache-manifest.e803f2b6685ef51e627206c4ae3b3f48.js": "/react-minigame/precache-manifest.e803f2b6685ef51e627206c4ae3b3f48.js",
+    "service-worker.js": "/react-minigame/service-worker.js",
+    "static/css/main.df814b37.chunk.css.map": "/react-minigame/static/css/main.df814b37.chunk.css.map",
+    "static/js/2.f524853c.chunk.js.LICENSE.txt": "/react-minigame/static/js/2.f524853c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2bb3fa1.js",
+    "static/js/2.f524853c.chunk.js",
+    "static/css/main.df814b37.chunk.css",
+    "static/js/main.96f02783.chunk.js"
+  ]
+}
