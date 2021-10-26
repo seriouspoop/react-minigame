@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 const Index = () => {
   const [board, setBoard] = useState(Array(9).fill(""));
   const [winner, setWinner] = useState("");
-  const [player, setPlayer] = useState("human");
+  const [current, setCurrent] = useState("human");
   const [players, setPlayers] = useState({ ai: "O", human: "X" });
 
   useEffect(() => {
@@ -47,19 +47,19 @@ const Index = () => {
     setBoard(Array(9).fill(""));
     setWinner("");
     if (players.ai === 'O') {
-      setPlayer('human')
+      setCurrent('human')
     } else {
-      setPlayer('ai')
+      setCurrent('ai')
     }
   };
 
   const switchPlayer = () => {
     if (players['human'] === "X") {
       setPlayers({ ai: "X", human: "O" });
-      setPlayer("ai");
+      setCurrent("ai");
     } else if (players['human'] === "O") {
       setPlayers({ ai: "O", human: "X" });
-      setPlayer("human");
+      setCurrent("human");
     }
     setBoard(Array(9).fill(""));
     setWinner("");
@@ -74,8 +74,8 @@ const Index = () => {
             winner={winner}
             board={board}
             calculateWinner={calculateWinner}
-            player={player}
-            setPlayer={setPlayer}
+            current={current}
+            setCurrent={setCurrent}
             players={players}
           />
         </div>

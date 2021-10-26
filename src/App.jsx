@@ -1,18 +1,19 @@
 import { useEffect } from "react";
 import "./css/App.css";
 
-function App({ setBoard, winner, board, calculateWinner, player, setPlayer, players }) {
+function App(prop) {
 
+  const { current, board, calculateWinner, setBoard, setCurrent, players } = prop;
   const { ai, human } = players;
 
   useEffect(() => {
-    if (player === 'ai' && calculateWinner(board)[0] === false) {
+    if (current === 'ai' && calculateWinner(board)[0] === false) {
       const newBoard = [...board];
       newBoard[bestMove(newBoard)] = ai;
-      setPlayer('human');
+      setCurrent('human');
       setBoard(newBoard);
     }
-  }, [board]);
+  });
 
   const scores = {
     [human]: -1,
@@ -71,12 +72,12 @@ function App({ setBoard, winner, board, calculateWinner, player, setPlayer, play
   };
 
   const playerValue = (id) => {
-    if (winner !== "") return;
+    if (prop.winner !== "") return;
     else if (board[id - 1] !== "") return;
-    else if (player === "human") {
+    else if (current === "human") {
       const newBoard = [...board];
       newBoard[id - 1] = human;
-      setPlayer("ai");
+      setCurrent("ai");
       setBoard(newBoard);
     }
   };
